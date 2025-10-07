@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İyi ki doğdun kuzeeeeeeen 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎂 İyi ki doğdun kuzeeeeeeen 💙</h1>
+    <p class="subtitle">Doğum Günün Kutlu Olsunnn! ✨</p>
+
+    <div class="cake">
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+
+    <button id="balloonButton">🎈 Balonları Uçur!</button>
+    <div id="balloonContainer"></div>
+  </div>
+
+  <script>
+    const button = document.getElementById("balloonButton");
+    const container = document.getElementById("balloonContainer");
+
+    button.addEventListener("click", () => {
+      for (let i = 0; i < 20; i++) {
+        const balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 80%)`;
+        container.appendChild(balloon);
+
+        setTimeout(() => balloon.remove(), 4000);
+      }
+    });
+  </script>
+</body>
+</html>

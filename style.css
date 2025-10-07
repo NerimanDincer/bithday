@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #b3e5fc, #e1f5fe);
+  font-family: "Comic Sans MS", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: #0277bd;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #01579b;
+  margin-bottom: 2em;
+}
+
+/* 🎂 Pasta */
+.cake {
+  position: relative;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+
+.plate {
+  width: 180px;
+  height: 20px;
+  background: #b3e5fc;
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  border-radius: 10px;
+}
+
+.layer {
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  left: 0;
+  border-radius: 10px;
+}
+
+.layer-bottom { background: #81d4fa; bottom: 20px; }
+.layer-middle { background: #4fc3f7; bottom: 60px; }
+.layer-top { background: #29b6f6; bottom: 100px; }
+
+.icing {
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  background: #e1f5fe;
+  top: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.candle {
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background: #ff8a80;
+  top: -30px;
+  left: calc(50% - 5px);
+  border-radius: 2px;
+}
+
+.flame {
+  position: absolute;
+  top: -10px;
+  left: 2px;
+  width: 6px;
+  height: 10px;
+  background: radial-gradient(ellipse at center, #ffeb3b 0%, #ff9800 80%);
+  border-radius: 50%;
+  animation: flicker 0.15s infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* 🎈 Balon animasyonu */
+.balloon {
+  position: absolute;
+  bottom: 0;
+  width: 25px;
+  height: 35px;
+  border-radius: 50%;
+  animation: rise 4s linear forwards;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+
+/* ✨ Fade in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  background-color: #4fc3f7;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8em 1.5em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #03a9f4;
+}
